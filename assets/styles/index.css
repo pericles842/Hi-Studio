@@ -1,4 +1,56 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+   margin: 0;
+   padding: 0;
+}
+
+:root {
+   --white: #e8e8f7;
+   --purpuraClaro: #544cf3;
+   --purpuraOscuro: #542bf4;
+   /*font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;*/
+}
+
+p {
+   font-family: 'Poppins', sans-serif
+}
+
+h2 {
+   font-family: 'Roboto', sans-serif;
+}
+
+header {
+   background: linear-gradient(70deg, #544cf3, #542bf4);
+   box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.3);
+   padding: 2px 0 20px 0;
+}
+
+.user-box {
+   display: flex;
+   color: var(--white);
+}
+
+.user-box img {
+   width: 40px;
+   margin: auto;
+   margin-left: 2%;
+   margin-right: 0;
+}
+
+.user-box p {
+   margin: auto;
+   margin-right: 0px;
+
+}
+
+.box-header-materias {
+   color: var(--white);
+}
+
+.title-materias {
+   display: flex;
+}
+
+.title-materias p {
+   margin: 0px 2px;
 }

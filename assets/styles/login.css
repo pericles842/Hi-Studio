@@ -4,7 +4,7 @@
 }
 
 .box-backgraund {
-   background: linear-gradient(70deg, #544cf3, #544cf3);
+   background: linear-gradient(70deg, #544cf3, #542bf4);
    padding:30px 30%;
    height: 700px;
 }
@@ -47,7 +47,7 @@
       margin: auto;
    }
    .box-backgraund {
-      background: linear-gradient(70deg, #544cf3, #544cf3);
+      background: linear-gradient(70deg, #544cf3, #542bf4);
       padding: 10px;
       height: 700px;
    }
@@ -64,7 +64,7 @@
       margin: auto;
    }
    .box-backgraund {
-      background: linear-gradient(70deg, #544cf3, #544cf3);
+      background: linear-gradient(70deg, #544cf3, #542bf4);
       padding: 20px 10%;
       height: 700px;
    }
@@ -81,7 +81,7 @@
       margin: auto;
    }
    .box-backgraund {
-      background: linear-gradient(70deg, #544cf3, #544cf3);
+      background: linear-gradient(70deg, #544cf3, #542bf4);
       padding: 20px 30%;
       height: 700px;
    }
