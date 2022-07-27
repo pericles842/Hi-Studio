@@ -14,3 +14,18 @@ CREATE DATABASE `histudio`;
         MODIFY `idlogin` int(11) NOT NULL AUTO_INCREMENT;
 
     INSERT INTO `login` (`idlogin`,`usuarios`,`contraseña`,`email`)VALUES(1,'admin','admin','admin@gmail.com');
+
+    CREATE TABLE `carrera`(
+        `idcarrera` int(11) NOT NULL,
+        `idlogin` int(11 ) NOT NULL,
+        `carrera` varchar(110) NOT NULL
+
+    )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+    ALTER TABLE `carrera`
+        ADD PRIMARY KEY (`idcarrera`);
+
+    ALTER TABLE `carrera`
+        MODIFY `idcarrera` int(11) NOT NULL AUTO_INCREMENT;
+
+    INSERT INTO `carrera` (`idcarrera`,`idlogin`,`carrera`)VALUES(1,1,'Arquitectura');

@@ -2,6 +2,9 @@
    margin: 0;
    padding: 0;
 }
+section{ /*quitar*/
+   background-color: #f0f0ff;
+}
 
 :root {
    --white: #e8e8f7;
@@ -12,13 +15,13 @@ font-family: 'Roboto', sans-serif;*/
 }
 
 p {
-   font-family: 'Poppins', sans-serif
+   font-family: 'Poppins', sans-serif;
 }
 
 h2 {
    font-family: 'Roboto', sans-serif;
 }
-
+/*HEADER*/
 header {
    background: linear-gradient(70deg, #544cf3, #542bf4);
    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.3);
@@ -48,9 +51,72 @@ header {
 }
 
 .title-materias {
-   display: flex;
+   display: flex;/*alineacion de palabras*/
 }
 
 .title-materias p {
    margin: 0px 2px;
+}
+/*Footer*/
+.box-footer{
+   display: flex;
+   justify-content: center;
+}
+.icons{
+   width: 50px;
+   margin: 0 2%; /*importante*/
+   margin: auto;
+   transition: 0.3s;
+}
+.icon{
+   width: 60px;
+   transition: 0.3s;
+}
+a{
+   padding: 0px 10px;
+}
+.icons:hover{
+   /*iconos*/
+   transition: 0.3s;
+   transform: scale(1.10);
+}
+.icon:hover{
+   transition: 0.3s;
+   transform: scale(1.30);
+}
+/*registro de materias*/
+.box1{
+   background: linear-gradient(70deg, #544cf3, #542bf4);
+   padding: 17%;
+}
+.box1 h1{
+   text-align: center;
+   color: white;
+   font-family: 'Roboto', sans-serif;
+}
+.box2{
+   text-align: center;
+   padding: 15px;
+   background-color: var(--white);
+   border-radius: 2px;
+   box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.3);
+
+}
+
+.box2 input[type="submit"]{
+   font-family: 'Poppins', sans-serif;
+   background-color: #544cf3;
+   border: none;
+   padding: 3px;
+   border-radius: 2px;
+}
+.box2 input[type="submit"]:hover{
+   background-color: #4038d1;
+} 
+@media screen and (max-width: 420px) { /*responsiv ceulares*/
+   .icons{
+      width: 40px;
+      margin: 0 2%; /*importante*/
+      margin: auto;
+   }
 }
