@@ -1,5 +1,9 @@
 <?php
 require('../conexion.php');
+   $consulta = "SELECT * FROM carreras";
+   $resultado=$mysqli->query($consulta);
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,14 +37,19 @@ require('../conexion.php');
             </div>
             <div class="title-materias">
                <p>6</p>
-               <p>materias-</p>
-               <p>ingenieria en sistemas</p>
+               <p >materias-</p>
+               <?php
+                  while ($row = $resultado->fetch_array()) {
+                      $carrera = $row['idcarrera'];
+                ?>
+               <p> <?php  echo  $carrera ?> </p>
+            <?php } ?>
             </div>
          </div>
       </div>
    </header>
    <section>
-   <h1>mamalo</h1>
+   <h1>lalocura</h1>
    </section>
    <div>
         <?php
@@ -48,7 +57,7 @@ require('../conexion.php');
         ?>
    </div>
    </div>
-
+   <script type="text/javascript" src="../assets/js/main.js"></script>
    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

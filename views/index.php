@@ -25,14 +25,14 @@ require('../conexion.php');
          <div class=" box2">
             <form action="../php/i.carrera.php" method="POST">
                <h3>Carrera</h3>
-               <input class="form-control" placeholder="Ej.Enfermeria" type="text" name="carrera">
+               <input class="form-control" placeholder="Ej.Enfermeria" type="text" name="carrera" >
                <br>
                <input class="btn btn-primary btn-lg btn-block " type="submit" value="Enviar">
             </form>
          </div>
       </div>
    </div>
-
+   <script type="text/javascript" src="../assets/js/main.js"></script>
    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

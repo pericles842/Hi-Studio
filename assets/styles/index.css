@@ -87,7 +87,7 @@ a{
 /*registro de materias*/
 .box1{
    background: linear-gradient(70deg, #544cf3, #542bf4);
-   padding: 17%;
+   padding: 20px 10px 100% 10px;
 }
 .box1 h1{
    text-align: center;
@@ -113,6 +113,20 @@ a{
 .box2 input[type="submit"]:hover{
    background-color: #4038d1;
 } 
+@media screen and (max-width: 450px) { /*responsiv ceulares*/
+   .box1 h1{
+      text-align: center;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      font-size: 25px;
+   }
+}
+@media screen and (min-width: 450px) { /*responsiv ceulares*/
+   .box1{
+      background: linear-gradient(70deg, #544cf3, #542bf4);
+      padding: 20px 50px 100% 50px;
+   }
+}
 @media screen and (max-width: 420px) { /*responsiv ceulares*/
    .icons{
       width: 40px;
