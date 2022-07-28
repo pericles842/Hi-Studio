@@ -1,12 +1,18 @@
 <?php
-require('../conexion.php');
-   $consulta = "SELECT * FROM carreras";
-   $resultado=$mysqli->query($consulta);
 
+use LDAP\Result;
+
+require('../conexion.php');
+//consulta carrera
+$consulta = "SELECT * FROM carrera";
+$resultado = $mysqli->query($consulta);
+//consulta login
+$consulta_login = "SELECT * FROM login";
+$resultado_login = $mysqli->query($consulta_login);
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
    <meta charset="UTF-8">
@@ -14,7 +20,7 @@ require('../conexion.php');
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Hi studio</title>
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Estilo del header-->
+   <!-- Estilo del header-->
    <link rel="stylesheet" href="../assets/styles/index.css">
    <link rel="shortcut icon" href="../assets/styles/images/isotipo.png" type="image/x-icon">
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,36 +32,47 @@ require('../conexion.php');
    <div class="spinner-border" role="status">
       <span class="sr-only">Hi studio</span>
       <header>
-      <div class="container">
-         <div class="user-box">
-            <p>Louis Sarmiento</p>
-            <img src="../assets/styles/images/Usuario.png" alt="user">
-         </div>
-         <div class="box-header-materias">
-            <div class="title-notes">
-               <h3>Gestión de Notas</h3>
+         <div class="container">
+            <div class="user-box">
+            <?php
+                  if ($resultado_login) {
+                     while ($roww = $resultado_login->fetch_array()) {
+                        $user= $roww['usuarios'];
+                  ?>
+                        <p> <?php echo  $user; ?> </p>
+                  <?php
+                     }
+                  } ?>
+               <img src="../assets/styles/images/Usuario.png" alt="user">
             </div>
-            <div class="title-materias">
-               <p>6</p>
-               <p >materias-</p>
-               <?php
-                  while ($row = $resultado->fetch_array()) {
-                      $carrera = $row['idcarrera'];
-                ?>
-               <p> <?php  echo  $carrera ?> </p>
-            <?php } ?>
+            <div class="box-header-materias">
+               <div class="title-notes">
+                  <h3>Gestión de Notas</h3>
+               </div>
+               <div class="title-materias">
+                  <p>0</p>
+                  <p>materias-</p>
+                  <?php
+                  if ($resultado) {
+                     while ($row = $resultado->fetch_array()) {
+                        $carrera = $row['carrera'];
+                  ?>
+                        <p> <?php echo  $carrera; ?> </p>
+                  <?php
+                     }
+                  } ?>
+               </div>
             </div>
          </div>
+      </header>
+      <section>
+         <h1>lalocura</h1>
+      </section>
+      <div>
+         <?php
+         require '../php/footer.php';
+         ?>
       </div>
-   </header>
-   <section>
-   <h1>lalocura</h1>
-   </section>
-   <div>
-        <?php
-            require'../php/footer.php';
-        ?>
-   </div>
    </div>
    <script type="text/javascript" src="../assets/js/main.js"></script>
    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

@@ -17,7 +17,6 @@ CREATE DATABASE `histudio`;
 
     CREATE TABLE `carrera`(
         `idcarrera` int(11) NOT NULL,
-        `idlogin` int(11 ) NOT NULL,
         `carrera` varchar(110) NOT NULL
 
     )ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -27,5 +26,3 @@ CREATE DATABASE `histudio`;
 
     ALTER TABLE `carrera`
         MODIFY `idcarrera` int(11) NOT NULL AUTO_INCREMENT;
-
-    INSERT INTO `carrera` (`idcarrera`,`idlogin`,`carrera`)VALUES(1,1,'Arquitectura');
