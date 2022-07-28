@@ -22,6 +22,7 @@ $resultado_login = $mysqli->query($consulta_login);
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    <!-- Estilo del header-->
    <link rel="stylesheet" href="../assets/styles/index.css">
+   <link rel="stylesheet" href="../assets/styles/gestioNotas.css">
    <link rel="shortcut icon" href="../assets/styles/images/isotipo.png" type="image/x-icon">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,15 +35,15 @@ $resultado_login = $mysqli->query($consulta_login);
       <header>
          <div class="container">
             <div class="user-box">
-            <?php
-                  if ($resultado_login) {
-                     while ($roww = $resultado_login->fetch_array()) {
-                        $user= $roww['usuarios'];
-                  ?>
-                        <p> <?php echo  $user; ?> </p>
-                  <?php
-                     }
-                  } ?>
+               <?php
+               if ($resultado_login) {
+                  while ($roww = $resultado_login->fetch_array()) {
+                     $user = $roww['usuarios'];
+               ?>
+                     <p> <?php echo  $user; ?> </p>
+               <?php
+                  }
+               } ?>
                <img src="../assets/styles/images/Usuario.png" alt="user">
             </div>
             <div class="box-header-materias">
@@ -66,7 +67,86 @@ $resultado_login = $mysqli->query($consulta_login);
          </div>
       </header>
       <section>
-         <h1>lalocura</h1>
+         <div class="row">
+            <div class="col-sm-6">
+               <div class="card">
+                  <div class="card-body">
+                     <h5 class="card-title">Special title treatment</h5>
+                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                     <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-6">
+               <div class="card">
+                  <div class="card-body">
+                     <h5 class="card-title">Special title treatment</h5>
+                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                     <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-sm-6">
+               <div class="card">
+                  <div class="card-body">
+                     <h5 class="card-title">Special title treatment</h5>
+                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                     <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-6">
+               <div class="card">
+                  <div class="card-body">
+                     <h5 class="card-title">Special title treatment</h5>
+                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                     <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-sm-6">
+               <div class="card">
+                  <div class="card-body">
+                     <h5 class="card-title">Special title treatment</h5>
+                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                     <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-6">
+               <div class="card">
+                  <div class="card-body">
+                     <h5 class="card-title">Special title treatment</h5>
+                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                     <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-sm-6">
+               <div class="card">
+                  <div class="card-body">
+                     <h5 class="card-title">Special title treatment</h5>
+                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                     <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-6">
+               <div class="card">
+                  <div class="card-body">
+                     <h5 class="card-title">Special title treatment</h5>
+                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                     <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+               </div>
+            </div>
+         </div>
       </section>
       <div>
          <?php
