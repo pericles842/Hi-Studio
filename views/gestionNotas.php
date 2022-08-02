@@ -70,79 +70,11 @@ $resultado_login = $mysqli->query($consulta_login);
          <div class="row">
             <div class="col-sm-6">
                <div class="card">
-                  <div class="card-body">
-                     <h5 class="card-title">Special title treatment</h5>
-                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                     <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-               </div>
-            </div>
-            <div class="col-sm-6">
-               <div class="card">
-                  <div class="card-body">
-                     <h5 class="card-title">Special title treatment</h5>
-                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                     <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="row">
-            <div class="col-sm-6">
-               <div class="card">
-                  <div class="card-body">
-                     <h5 class="card-title">Special title treatment</h5>
-                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                     <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-               </div>
-            </div>
-            <div class="col-sm-6">
-               <div class="card">
-                  <div class="card-body">
-                     <h5 class="card-title">Special title treatment</h5>
-                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                     <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="row">
-            <div class="col-sm-6">
-               <div class="card">
-                  <div class="card-body">
-                     <h5 class="card-title">Special title treatment</h5>
-                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                     <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-               </div>
-            </div>
-            <div class="col-sm-6">
-               <div class="card">
-                  <div class="card-body">
-                     <h5 class="card-title">Special title treatment</h5>
-                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                     <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="row">
-            <div class="col-sm-6">
-               <div class="card">
-                  <div class="card-body">
-                     <h5 class="card-title">Special title treatment</h5>
-                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                     <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-               </div>
-            </div>
-            <div class="col-sm-6">
-               <div class="card">
-                  <div class="card-body">
-                     <h5 class="card-title">Special title treatment</h5>
-                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                     <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <div class="card-body text-center">
+                     <h2 class="card-title">Dibujo I </h2>
+                     <h3 class="card-text">10%</h3>
+                     <a href="#" class="btn bg-warning text-white">Ver trabajos</a>
+                     <a href="#" class="btn bg-danger text-white">Eliminar</a>
                   </div>
                </div>
             </div>
@@ -154,6 +86,7 @@ $resultado_login = $mysqli->query($consulta_login);
          ?>
       </div>
    </div>
+   
    <script type="text/javascript" src="../assets/js/main.js"></script>
    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
