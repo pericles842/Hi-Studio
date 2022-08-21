@@ -22,7 +22,7 @@ $resultado_login = $mysqli->query($consulta_login);
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    <!-- Estilo del header-->
    <link rel="stylesheet" href="../assets/styles/index.css">
-   <link rel="stylesheet" href="../assets/styles/gestioNotas.css">
+   <link rel="stylesheet" href="../assets/styles/gestionFacturas.css">
    <link rel="shortcut icon" href="../assets/styles/images/isotipo.png" type="image/x-icon">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,7 +48,7 @@ $resultado_login = $mysqli->query($consulta_login);
             </div>
             <div class="box-header-materias">
                <div class="title-notes">
-                  <h3>Gestión de Notas</h3>
+                  <h3>Gestión de Facturas</h3>
                </div>
                <div class="title-materias">
                   <p>0</p>
@@ -67,23 +67,17 @@ $resultado_login = $mysqli->query($consulta_login);
          </div>
       </header>
       <section>
-         <div class="container">
-            <div class="row">
-               <div class="col-sm-3">
-                  <div class="card mt-4 mb-4 " style="box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.192);">
-                     <div class="card-body">
-                        <h4 class="card-title ">Matematica</h4>
-                        <h6 class="card-subtitle mb-2 text-muted mb-4">No hay Actividades</h6>
-                        <h1 class="card-text text-center">07</h1>
-                        <div class="text-center">
-                           <a href="#" class="card-link">Ver mas</a>
-                           <a href="#" class="card-link  text-danger">Borrar</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+            <div>
+                <div>
+                    <img src="../assets/styles/images/aprobado.png" alt="aprobado">
+                </div> 
+                <div>
+                    <h2>Enero</h2>
+                </div>
+                <div>
+                    
+                </div>
             </div>
-         </div>
       </section>
       <div>
          <?php

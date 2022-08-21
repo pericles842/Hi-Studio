@@ -1,5 +1,4 @@
 CREATE DATABASE `histudio`;
-
     CREATE TABLE `login`(
         `idlogin` int(11) NOT NULL,
         `usuarios`varchar(110) NOT NULL,
@@ -26,3 +25,15 @@ CREATE DATABASE `histudio`;
 
     ALTER TABLE `carrera`
         MODIFY `idcarrera` int(11) NOT NULL AUTO_INCREMENT;
+
+
+    CREATE TABLE `materias`(
+        `idmaterias` int(11) NOT NULL,
+        `idcarrera` int(11) NOT NULL,
+        `materia` varchar(110) NOT NULL
+    )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    ALTER TABLE `materias`
+        ADD PRIMARY KEY (`idmaterias`);
+
+    ALTER TABLE `materias`
+        MODIFY `idmaterias` int(11) NOT NULL AUTO_INCREMENT;

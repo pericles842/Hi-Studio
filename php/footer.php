@@ -18,16 +18,16 @@
    <footer>
       <div class="container">
          <div class="box-footer">
-            <a href="./gestionNotas.html">
+            <a href="../views/gestionNotas.php">
                <img class="icons" src="../assets/styles/images/Clip.png" alt="">
             </a>
-            <a href="">
+            <a href="../views/calendarioTrabajos.php">
                <img class="icons" src="../assets/styles/images/Calendario.png" alt="calendario">
             </a>
             <a href="">
                <img class="icon" src="../assets/styles/images/BotonDeAgregar.png" alt="boton de agregar">
             </a>
-            <a href="">
+            <a href="../views/gestionFacturas.php">
                <img class="icons" src="../assets/styles/images/Pagos.png" alt="pagos">
             </a>
             <a href="">
