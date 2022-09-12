@@ -19,12 +19,12 @@
       <div class="container">
          <div class="box-footer">
             <a href="../views/gestionNotas.php">
-               <img class="icons" src="../assets/styles/images/Clip.png" alt="">
+               <img class="icons" src="../assets/styles/images/Clip.png" alt="Notas">
             </a>
             <a href="../views/calendarioTrabajos.php">
                <img class="icons" src="../assets/styles/images/Calendario.png" alt="calendario">
             </a>
-            <a href="">
+            <a href="../views/src_registros.php">
                <img class="icon" src="../assets/styles/images/BotonDeAgregar.png" alt="boton de agregar">
             </a>
             <a href="../views/gestionFacturas.php">

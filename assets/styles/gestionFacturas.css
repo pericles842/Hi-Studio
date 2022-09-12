@@ -1,0 +1,25 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.boxFactura{
+	display: flex;
+	background-color: #fff;
+	box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.3);
+	border-radius: 5px;
+	padding: 15px 20px;
+	text-align: center;
+}
+.boxMonth{
+	padding: 0 10px;
+}
+.boxTotal {
+	display: flex;
+	padding: 5px 0;
+}
+.boxTotal p{
+	padding: 5px 0;
+}
+img{
+	width: 40px
+}
