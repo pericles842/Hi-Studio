@@ -9,7 +9,12 @@ $resultado = $mysqli->query($consulta);
 //consulta login
 $consulta_login = "SELECT * FROM login";
 $resultado_login = $mysqli->query($consulta_login);
+//consulta de conteo carreras
+//TODO REVISAR NUMERO DE MATERIAS EN LOS HEADER
+$sqlicount = "SELECT COUNT(*) total FROM materias";
+$rescount = $mysqli->query($sqlicount);
 
+$countMaterias = "";
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -51,7 +56,15 @@ $resultado_login = $mysqli->query($consulta_login);
                   <h3>Gestión de Notas</h3>
                </div>
                <div class="title-materias">
-                  <p>0</p>
+                  //!CANTIDAD DE MATERIAS ARREGLAR 
+               <?php
+                  if ($rescount) {
+                     while ($rowco = $rescount->fetch_array()) {
+                  ?>
+                        <p> <?php echo  $rowco; ?> </p>
+                  <?php
+                     }
+                  } ?>
                   <p>materias-</p>
                   <?php
                   if ($resultado) {
@@ -69,19 +82,29 @@ $resultado_login = $mysqli->query($consulta_login);
       <section>
          <div class="container">
             <div class="row">
-               <div class="col-sm-3">
-                  <div class="card mt-4 mb-4 " style="box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.192);">
-                     <div class="card-body">
-                        <h4 class="card-title ">Matematica</h4>
-                        <h6 class="card-subtitle mb-2 text-muted mb-4">No hay Actividades</h6>
-                        <h1 class="card-text text-center">07</h1>
-                        <div class="text-center">
-                           <a href="#" class="card-link">Ver mas</a>
-                           <a href="#" class="card-link  text-danger">Borrar</a>
+               <?php
+               $sqlmateria = "SELECT * FROM materias";
+               $resmateria = $mysqli->query($sqlmateria);
+
+               while ($rowm = $resmateria->fetch_array()) {
+                  $materia = $rowm['materia'];
+               ?>
+                  <div class="col-sm-3">
+                     <div class="card mt-4 mb-4 " style="box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.192);">
+                        <div class="card-body">
+                           <h4 class="card-title "><?php echo $materia ?></h4>
+                           <h6 class="card-subtitle mb-2 text-muted mb-4">No hay Actividades</h6>
+                           <h1 class="card-text text-center">07</h1>
+                           <div class="text-center">
+                              <a href="#" class="card-link">Ver mas</a>
+                              <a href="#" class="card-link  text-danger">Borrar</a>
+                           </div>
                         </div>
                      </div>
                   </div>
-               </div>
+               <?php
+                  $countMaterias = $countMaterias + 1;
+               } ?>
             </div>
          </div>
       </section>
