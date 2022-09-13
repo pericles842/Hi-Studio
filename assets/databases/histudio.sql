@@ -47,8 +47,10 @@ CREATE DATABASE `histudio`;
         `idactividad` int(11) NOT NULL,
         `deliver_date` date NOT NULL,
         `title_actividad` varchar(110) NOT NULL,
-        `deliver_hour` decimal(4,2)  NOT NULL,
-        `description` varchar(300) NOT NULL
+        `deliver_hour` varchar(4)  NOT NULL,
+        `description` varchar(300) NOT NULL,
+        `pm_am` varchar (4) NOT NULL,
+        `materia` varchar(110) NOT NULL
     )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
     ALTER TABLE `actividades`

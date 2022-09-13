@@ -37,6 +37,7 @@ $countMaterias = "";
 <body>
    <div class="spinner-border" role="status">
       <span class="sr-only">Hi studio</span>
+      <!-- style="width: 100%; position: fixed; " HEADER ESTATICO -->
       <header>
          <div class="container">
             <div class="user-box">
@@ -56,12 +57,12 @@ $countMaterias = "";
                   <h3>Gestión de Notas</h3>
                </div>
                <div class="title-materias">
-                  //!CANTIDAD DE MATERIAS ARREGLAR 
+                  <!-- //!CANTIDAD DE MATERIAS ARREGLAR  -->
                <?php
                   if ($rescount) {
                      while ($rowco = $rescount->fetch_array()) {
                   ?>
-                        <p> <?php echo  $rowco; ?> </p>
+                        <p>  0 </p>
                   <?php
                      }
                   } ?>
@@ -79,9 +80,9 @@ $countMaterias = "";
             </div>
          </div>
       </header>
-      <section>
+      <section >
          <div class="container">
-            <div class="row">
+            <div class="row" >
                <?php
                $sqlmateria = "SELECT * FROM materias";
                $resmateria = $mysqli->query($sqlmateria);
@@ -103,9 +104,12 @@ $countMaterias = "";
                      </div>
                   </div>
                <?php
-                  $countMaterias = $countMaterias + 1;
                } ?>
             </div>
+            <!-- MARGEN ENTRE EL FOOTER Y EL SECTION -->
+            <br>
+            <br>
+            <br>
          </div>
       </section>
       <div>

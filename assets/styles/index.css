@@ -61,7 +61,11 @@ header {
 /*Footer*/
 .box-footer{
    display: flex;
-   justify-content: center;
+   justify-content: center;/*!ARREGLAR FOOTER*/
+   width: 85%; 
+   position: fixed ;
+   bottom:0;
+   background-color: #542bf4;
 }
 .icons{
    width: 50px;

@@ -9,6 +9,10 @@ $resultado = $mysqli->query($consulta);
 //consulta login
 $consulta_login = "SELECT * FROM login";
 $resultado_login = $mysqli->query($consulta_login);
+
+$sqlmateria = "SELECT * FROM materias";
+$resmateria = $mysqli->query($sqlmateria);
+
 //*condicioanl de registro
 if (isset($_POST['submit'])) {
     /*Asigno variables*/
@@ -16,11 +20,13 @@ if (isset($_POST['submit'])) {
     $dsction = $_POST['dsction'];
     $date = $_POST['date'];
     $hour = $_POST['hour'];
+    $materia = $_POST['materia'];
+    $pm_am = $_POST['pm_am'];
 
     //echo $categoria.'--'.$describelo; exit();
-    $str = "INSERT INTO actividades  (deliver_date,title_actividad,deliver_hour,description)
-    VALUES ('" .$date . "','" . ucfirst($title) . "','".$hour."',
-    '".ucfirst($dsction)."')";
+    $str = "INSERT INTO actividades  (deliver_date,title_actividad,deliver_hour,description,materia,pm_am)
+    VALUES ('" . $date . "','" . ucfirst($title) . "','" . $hour . "',
+    '" . ucfirst($dsction) . "','".$materia."','".$pm_am."')";
     $conexion = $mysqli->query($str);
 
     echo '<script language="javascript">alert("Registro Exitoso !");window.location.href="gestionNotas.php"; </script>';
@@ -87,22 +93,57 @@ if (isset($_POST['submit'])) {
                 <form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
                     <div class="row">
                         <div class="col-sm-6 ">
-                            <h5>Titulo de la Asignación </h5>
-                            <input class="form-control" type="text" name="title">
+                            <div class="form-group">
+                                <h5>Titulo de la Asignación </h5>
+                                <input class="form-control" type="text" name="title">
+                            </div>
                         </div>
                         <div class="col-sm-6 ">
-                            <h5>Descripcion </h5>
-                            <input class="form-control" type="text" name="dsction">
+                            <div class="form-group">
+                                <h5>Descripcion </h5>
+                                <input class="form-control" type="text" name="dsction">
+                            </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-9">
-                            <h5>Fecha de Entrega </h5>
-                            <input class="form-control" type="date" name="date">
+                        <div class="col-sm-2 col-6">
+                            <div class="form-group">
+                                <h5> Entrega </h5>
+                                <input class="form-control" type="date" name="date">
+                            </div>
                         </div>
-                        <div class="col-sm-3">
-                            <h5>Hora </h5>
-                            <input class="form-control" type="text" name="hour">
+                        <div class="col-sm-4  col-6">
+                            <div class="form-group">
+                                <h5>Materia </h5>
+                                <select name="materia" class="form-control">
+                                    <option selected>Mas</option>
+                                    <?php
+                                    if ($resmateria) {
+                                        while ($rowm = $resmateria->fetch_array()) {
+                                            $materia = $rowm['materia'];
+                                    ?>
+                                            <option value="<?php echo $materia ?>"> <?php echo $materia ?></option>
+                                    <?php
+                                        }
+                                    } ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-4  col-6">
+                            <div class="form-group">
+                                <h5>Hora </h5>
+                                <input class="form-control" type="time" name="hour">
+                            </div>
+                        </div>
+                        <div class="col-sm-2  col-6">
+                            <div class="form-group">
+                                <h5 style="visibility:hidden;">.</h5>
+                                <select name="pm_am" class="form-control">
+                                    <option value="" selected>Mas</option>
+                                    <option value="PM">PM</option>
+                                    <option value="AM">AM</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <div class="d-f mt-4 mb-5" align="center">

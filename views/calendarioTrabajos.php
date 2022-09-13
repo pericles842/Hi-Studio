@@ -8,6 +8,9 @@
     $consulta_login = "SELECT * FROM login";
     $resultado_login = $mysqli->query($consulta_login);
 
+    $sqlactividad = "SELECT * FROM actividades";
+    $resactividad = $mysqli->query($sqlactividad);
+
     ?>
     <!DOCTYPE html>
     <html lang="es">
@@ -67,21 +70,33 @@
             <section>
                 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
                 <div class="container">
-                    <div class="row row-striped">
-                        <div class="col-4 text-right">
-                            <h1 class="display-4"><span class="badge badge-secondary">27</span></h1>
-                            <h2>OCT</h2>
+                    <?php
+                    while ($rowa = $resactividad->fetch_array()) {
+                        $title = $rowa['title_actividad'];
+                        $fcha = $rowa['deliver_date'];
+                        $hour = $rowa['deliver_hour'];
+                        $dcn = $rowa['description'];
+                        $materia = $rowa['materia'];
+                        $pm_am = $rowa['pm_am'];
+
+                    ?>
+                        <div class="row row-striped">
+                            <div class="col-4 text-right">
+                                <h1 class="display-4"><span class="badge badge-secondary">27</span></h1>
+                                <h2>OCT</h2>
+                            </div>
+                            <div class="col-8">
+                                <h3 class="text-uppercase"><?php  echo $title?></h3>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item"><i class="fa fa-calendar-o" aria-hidden="true"></i><?php echo $fcha?></li>
+                                    <li class="list-inline-item"><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo $hour?>-<?php echo $pm_am?></li>
+                                    <li class="list-inline-item"><i class="fa fa-book" aria-hidden="true"></i> <?php echo $materia?></li>
+                                </ul>
+                                <p><?php echo $dcn?></p>
+                            </div>
                         </div>
-                        <div class="col-8">
-                            <h3 class="text-uppercase"><strong>Operations Meeting</strong></h3>
-                            <ul class="list-inline">
-                                <li class="list-inline-item"><i class="fa fa-calendar-o" aria-hidden="true"></i> Friday</li>
-                                <li class="list-inline-item"><i class="fa fa-clock-o" aria-hidden="true"></i> 2:30 PM - 4:00 PM</li>
-                                <li class="list-inline-item"><i class="fa fa-book" aria-hidden="true"></i> Room 4019</li>
-                            </ul>
-                            <p>Lorem ipsum dolsit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div>
-                    </div>
+                        <br>
+                    <?php } ?>
                 </div>
             </section>
             <div>

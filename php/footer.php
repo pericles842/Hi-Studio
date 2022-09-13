@@ -15,7 +15,7 @@
 </head>
 
 <body>
-   <footer>
+   <footer  >
       <div class="container">
          <div class="box-footer">
             <a href="../views/gestionNotas.php">
